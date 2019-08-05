@@ -1,0 +1,42 @@
+﻿@using WebDemo2.Models.Entities;
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    
+}
+
+    <table class="table table-border cell-border">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserName</th>
+                <th>PassWorld</th>
+                <th>PersonInfo</th>
+                <th>Sex</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (KeyValuePair<string, object> keyValue in ViewData)
+            {
+                Person p = (Person)keyValue.Value;
+            <tr>
+                <td>@keyValue.Key</td>
+                <td class="info">@p.UserName</td>
+                <td>@p.PassWorld</td>
+                <td>@p.PersonInfo</td>
+                @if (p.sex)
+                {
+                    <td>man</td>
+                }
+                else
+                {
+                    <td>woman</td>
+                }
+
+            </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+
