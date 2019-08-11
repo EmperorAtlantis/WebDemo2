@@ -20,6 +20,7 @@ namespace WebDemo2.Tests.Controllers
             // 断言
             Assert.IsNotNull(result);
             Assert.AreEqual("Home Page", result.ViewBag.Title);
+            
         }
     }
 }

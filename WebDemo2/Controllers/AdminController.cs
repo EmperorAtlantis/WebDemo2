@@ -10,8 +10,14 @@ namespace WebDemo2.Controllers
     [AdminActionFilter]
     public class AdminController : Controller
     {
+        
         // GET: Admin
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult About()
         {
             return View();
         }
